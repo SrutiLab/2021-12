@@ -1,0 +1,49 @@
+import java.util.Scanner;
+class Product
+{
+int price;
+String pcode,pname;
+void getdetails()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the product code");
+pcode =sc.nextLine();
+
+System.out.println("enter the product name");
+pname=sc.nextLine();
+
+System.out.println("enter the product price");
+price =sc.nextInt();
+}
+
+void display()
+{
+System.out.println("product code="+pcode);
+System.out.println("product name="+pname);
+System.out.println("product name"+price);
+}
+}
+class main
+{
+public static void main(String args[])
+{
+Product p1=new Product();
+p1.getdetails();
+Product p2=new Product();
+p2.getdetails();
+Product p3=new Product();
+p3.getdetails();
+if(p1.price<p2.price  && p1.price<p3.price)
+{
+p1.display();
+}
+else if(p2.price<p3.price )
+{
+p2.display();
+}
+else
+{
+p3.display();
+}
+}
+}
